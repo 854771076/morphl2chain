@@ -109,8 +109,7 @@ class Morphl2_Bot:
         return signed_message.signature.hex()
     @log('开盲盒')  
     def open_blind_box(self):
-        address=self.account.address
-        key=self.get_key(address)
+        key=self.get_key()
         json_data = {
             'message': key[1],
             'signature': self.sign_msg(),
@@ -121,8 +120,7 @@ class Morphl2_Bot:
         logger.info(response.json())
     @log('签到')  
     def sign_in(self):
-        address=self.account.address
-        key=self.get_key(address)
+        key=self.get_key()
         json_data = {
             'message': key[1],
             'signature': self.sign_msg(),
