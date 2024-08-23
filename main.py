@@ -106,7 +106,10 @@ class Morphl2_Bot:
         # 签名消息
         signed_message = self.web3.eth.account.sign_message(message_encoded,self.private_key)
         # 打印签名的消息
-        return signed_message.signature.hex()
+        sign=signed_message.signature.hex()
+        if sign[:2]!='0x':
+            sign='0x'+sign
+        return sign
     @log('开盲盒')  
     def open_blind_box(self):
         key=self.get_key()

@@ -53606,4 +53606,4 @@ function get_data(address,projectId=null,votingPower=null){
     let message=y.utils.sha3(JSON.stringify(r))
     return [data,message,address]
 }
-// console.log(get_data('0x72691a36ED1fAC3b197Fb42612Dc15a8958bf9f2'))
+console.log(get_data('0x72691a36ED1fAC3b197Fb42612Dc15a8958bf9f2'))
