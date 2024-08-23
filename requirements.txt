@@ -1,5 +1,6 @@
 web3
 loguru
+execjs
 fake_useragent
 requests
 curl_cffi
